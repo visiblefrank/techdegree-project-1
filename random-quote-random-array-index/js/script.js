@@ -17,18 +17,21 @@ const scoreTwoElement = document.querySelector('#score-2');
 // YOUR CODE GOES HERE!!! Do the steps below to complete this challenge
 
 // 1) Uncomment the array below
-//const twelveSidedDie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const twelveSidedDie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 
 // 2) Create a function named diceRoll.  Give it a parameter called array — this goes in the parens.
   // 2a) Create a variable that uses `Math.ceil`, `Math.random` and the length of the array parameter to generate a random number
-  // NOTE: Introducing Functions video — https://teamtreehouse.com/library/introducing-functions-5
-  // NOTE: Create a Random Number video — https://teamtreehouse.com/library/javascript-basics/working-with-numbers/create-a-random-number
+  
+  function diceRoll(array) {
+    var randNum = Math.ceil(Math.random() * twelveSidedDie.length);
+    return array;
+  }
+
 
   // 2b) `return` the random number variable
 
-
-// 3) Complete the steps in the comments in the event listener below
+// 3) Complete the steps in the comments in the event listener below.
 
 
 /**
@@ -41,16 +44,21 @@ playBtn.addEventListener('click', () => {
   // 4) Create two variables to store player one and player two scores
     // 4a) Set both variables equal to a call to the `diceRoll` function - Arguments: twelveSidedDie
 
-
+var player1 = diceRoll(twelveSidedDie[randNum]);
+var player2 = diceRoll(twelveSidedDie[randNum2]);
   // 5) Log out the two variables above to test their values — check them out in the console
 
-
+console.log(player1);
+console.log(player2);
   // 6) Set the innerHTML of the `scoreOneElement` and `scoreTwoElement` variables above equal to the dice roll variables you just created
 
-
+  scoreOneElement.innerHTML = player1;
+ scoreTwoElement.innerHTML = player2;
   // Helpful log statement to test function — You can comment out this if you like
-  console.log('Play button is functional!');
+  //console.log('Play button is functional!');
 
   // Calling helper function from color-changer.js to set the color of the results
   updateColors(scoreOneElement, scoreTwoElement);
+
 });
+
