@@ -24,7 +24,7 @@ const twelveSidedDie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   // 2a) Create a variable that uses `Math.ceil`, `Math.random` and the length of the array parameter to generate a random number
   
   function diceRoll(array) {
-    var randNum = Math.ceil(Math.random() * array);
+    var randNum = Math.ceil(Math.random() * array.length);
     return randNum;
   }
 
@@ -44,8 +44,8 @@ playBtn.addEventListener('click', () => {
   // 4) Create two variables to store player one and player two scores
     // 4a) Set both variables equal to a call to the `diceRoll` function - Arguments: twelveSidedDie
 
-var player1 = diceRoll(twelveSidedDie[11]);
-var player2 = diceRoll(twelveSidedDie[11]);
+var player1 = diceRoll(twelveSidedDie);
+var player2 = diceRoll(twelveSidedDie);
   // 5) Log out the two variables above to test their values — check them out in the console
 
 console.log(player1);
