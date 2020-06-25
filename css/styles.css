@@ -25,8 +25,12 @@ header {
 h1 {
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
 }
+/* additional buttons to start/stop auto run */
+.auto-btn{
+  text-align: right;
+}
 
-.load-quote {
+.load-quote, .auto-btn button  {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
   width: 12em;
@@ -40,11 +44,11 @@ h1 {
   transition: 0.5s;
 }
 
-.load-quote:hover {
+.load-quote:hover, .auto-btn button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.load-quote:focus {
+.load-quote:focus, .auto-btn button:focus {
   outline: none;
 }
 
@@ -114,6 +118,7 @@ h1 {
   content: ", ";
   font-style: normal;
 }
+
 
 @media (min-width: 768px) {
   body {
