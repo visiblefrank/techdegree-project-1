@@ -100,7 +100,7 @@ function autoPlay() {
 function randColor() {
   return Math.floor(Math.random() * 256);
 }
-//assign randum numbers to variables to be used for r, g, b values. Then change body background to concatenated RGB values
+//assign random numbers to variables to be used for r, g, b values. Then change body background to concatenated RGB values
 function changeColor(){
 let r = randColor();
 let g = randColor();
