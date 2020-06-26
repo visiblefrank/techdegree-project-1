@@ -25,12 +25,8 @@ header {
 h1 {
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
 }
-/* additional buttons to start/stop auto run */
-.auto-btn{
-  text-align: right;
-}
 
-.load-quote, .auto-btn button  {
+.load-quote{
   color: #fff;
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
   width: 12em;
